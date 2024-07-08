@@ -1,0 +1,57 @@
+.para {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* width: 50%; */
+}
+
+/* Base styles */
+.apod-container {
+    position: relative;
+    /* padding: 20px;
+     */
+    background-size: cover;
+    background-position: center;
+}
+
+.blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+}
+
+.apod-image {
+    width: 100%; /* Ensures image is responsive */
+    max-width: 700px; /* Maximum size */
+    height: auto;
+}
+
+.para {
+    flex: 1 1 300px; /* Flex basis of 300px, but able to grow and shrink */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-content, .recent-courses-container, .dashboard-container, .main-content {
+        flex-direction: column;
+    }
+
+    .course-card, .recent-courses-list {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .para {
+        order: -1; /* Move text above the image on small screens */
+    }
+}
