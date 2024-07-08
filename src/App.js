@@ -6,13 +6,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SpaceNavbar from './components/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import Header from './components/Header';
+import MenuPage from './pages/MenuPage';
+
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
           <Route path='/' element={<HomePage/>} />
+          <Route path='/universe' element={<MenuPage/>} />
+          <Route path='/apod' element={<AstronomyPicture/>} />
+          <Route path='/mars' element={<MarsRoverPhotos/>} />
         </Routes>
       </Router>
       {/* <SpaceNavbar /> */}

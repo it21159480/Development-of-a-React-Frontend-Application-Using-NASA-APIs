@@ -1,0 +1,23 @@
+
+.hover-effect:hover {
+  color: #5e82b9 !important; /* Change hover color */
+  text-decoration: none; /* Add underline on hover */
+}
+.gradient-navbar {
+  padding: '10px 25px 10px 25px';
+  background: linear-gradient(to right, #0b272e, #5880d8);
+}
+
+@keyframes orbit {
+0% { transform: rotate(0deg) translateX(20px); }
+100% { transform: rotate(360deg) translateX(20px); }
+}
+
+.satellite {
+  width: 40px; /* Set the width of the satellite image */
+  height: 40px; /* Set the height of the satellite image */
+  background-image: url('https://w7.pngwing.com/pngs/116/158/png-transparent-earth-t-shirt-planet-earth-planet-earth-globe-world-earth-thumbnail.png');
+  background-size: cover; /* Ensure the image covers the element */
+  background-position: center; /* Center the image within the element */
+  animation: orbit 10s linear infinite; /* Adjust animation timing as needed */
+}
